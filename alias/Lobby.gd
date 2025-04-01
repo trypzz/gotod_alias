@@ -17,7 +17,8 @@ func _ready():
 	else:
 		start_button.disabled = true
 		start_button.text = "Очікуємо старту від хоста"
-	register_player(id, Global.username).rpc()
+
+	rpc_id(1, "register_player", id, Global.username)
 	update_player_list()
 
 
@@ -25,7 +26,7 @@ func _ready():
 @rpc("any_peer")
 func register_player(peer_id, nickname):
 	players_list.set(peer_id, nickname)
-	print("Гравець зареєстрований:", peer_id, nickname)
+	print("Гравець зареєстрований: ", peer_id, nickname)
 	update_player_list()
 
 # Оновлення інтерфейсу (список гравців)
