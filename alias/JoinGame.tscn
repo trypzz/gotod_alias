@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://du68n7byap4gf"]
+
+[ext_resource type="Script" uid="uid://wtci8jxbtjc0" path="res://JoinGame.gd" id="1_vmdio"]
+
+[node name="JoinLobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vmdio")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 358.0
+offset_bottom = 215.0
+
+[node name="UserName" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+text = "JoinedPlayer1"
+placeholder_text = "UserName"
+
+[node name="IPInput" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+text = "127.0.0.1"
+placeholder_text = "Enter server IP"
+
+[node name="ConnectButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Connect"
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
